@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    container_name: telzir_web
+    build:
+      context: ./react-ui
+      target: development
+    image: prj_carona_uni_react_app:dev
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:9000
+    stdin_open: true
+    volumes:
+       - ./react-ui:/usr/src/app
+       - /usr/src/app/node_modules
