@@ -1,11 +1,9 @@
-
+import HomePage from "@/components/pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        APP INICIAL
-      </header>
+    <div id="App">
+      <HomePage/>
     </div>
   );
 }
