@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: telzir_web:production
+    image: loldesign-telzir-web-challenge
     build:
       context: ./react-ui
       target: production

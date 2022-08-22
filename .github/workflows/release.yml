@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: docker build -f react-ui/Dockerfile --target production --tag $REGISTRY_NAME/$IMAGE_NAME ./react-ui
+      - run: docker-compose -f docker-compose.build.yml build --no-cache --tag  web 
+      - run: docker tag $IMAGE_NAME $REGISTRY_NAME/$IMAGE_NAME
       - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
       - run: docker push $REGISTRY_NAME/$IMAGE_NAME:latest
