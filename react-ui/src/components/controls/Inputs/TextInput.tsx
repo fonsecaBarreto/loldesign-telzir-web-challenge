@@ -16,7 +16,7 @@ export const TextInput: React.FunctionComponent<TextInputType.Params> = ({
   }
     
   const common_props = {
-    disabled, placeHolder: placeHolder ?? "", handleChanges, value
+    disabled, placeholder: placeHolder ?? "", onInput: handleChanges, value
   }
   return (
     <>
