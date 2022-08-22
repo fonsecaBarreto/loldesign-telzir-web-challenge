@@ -10,7 +10,7 @@ export const NumberInput: React.FunctionComponent<NumberInputType.Params> = ({
   name, onChange, placeHolder, value=0, disabled=false }) =>{
     
   function handleChanges( e:any | ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement> ) { 
-    onChange(name, e.target.value)
+    onChange(name, Number(e.target.value))
   }
     
   const common_props = {
