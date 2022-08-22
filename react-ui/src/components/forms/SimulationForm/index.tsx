@@ -98,7 +98,7 @@ export const SimulationForm: React.FunctionComponent<SimulationFormTypes.Props> 
     <footer className="form-grid-footer">
       <button 
         className="telzir-add-btn"
-        onClick={submit}> + Adicionar Simulação 
+        onClick={submit}> &#43; Adicionar Simulação 
       </button>
     </footer>
 

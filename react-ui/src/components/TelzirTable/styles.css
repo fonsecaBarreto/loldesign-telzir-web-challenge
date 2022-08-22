@@ -1,0 +1,54 @@
+.telzir-table{
+  position: relative;
+  border-radius:  4px;
+  overflow: auto;
+  width: 100%;
+}
+
+.telzir-table > .telzir-table-scroll{
+/*   position: absolute;
+  top: 0; left: 0; */
+  min-width: 100%;
+  width: fit-content;
+  height: fit-content;
+}
+
+.telzir-table table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  overflow:hidden;  
+}
+
+.telzir-table table > thead tr {
+  background-color:  var(--main-color);
+  color: #ffffff;
+  text-align: left;
+}
+.telzir-table table th,
+.telzir-table table td {
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.telzir-table table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.telzir-table table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.telzir-table table tbody tr:hover {
+  color: var(--main-color);
+}
+
+.telzir-table table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--main-color);
+}
+
+
+
