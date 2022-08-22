@@ -1,38 +1,55 @@
 /* Header */
 .primary-header-container{
     height: var(--header-height);
-    background-color: rgb(217, 217, 4);
     background-color: var(--main-color);
+    background-image: linear-gradient(62deg,#f18f57 0%,  #fd9a61 40%, #f18f57 100%);
+
 }
 
 .primary-header-content{
+    position: relative;
     height: 100%; width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
     align-items: center;
     gap: 12px;
 }
 
-.primary-header-content > section {
-   height: 100%; width: 100%;
-   display: flex; flex-direction: row;  align-items: center;
-   justify-content: flex-end;
-   column-gap: 12px;
+.telzir-logo{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
-.backwards-btn{
-    display: flex; flex-direction: center;  align-items: center; justify-content: center;
-    height: 42px;
-    width: 64px;
-    font-size: 24px;
-    border-radius: 12px;
-    border: solid 1px #ddd;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.505);
+
+.telzir-logo > img{
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    height: calc(var(--header-height) - 18px);
+    object-fit: cover;
+    width: auto;
+    box-shadow: #aaa 0px 1px;
 }
 
-.primary-header-title{
-    font-size: 18px;
+.telzir-logo > span{
+    text-transform: uppercase;
+    color: white;
     font-weight: bold;
+    font-size: 24px;
+    text-shadow: #444 0px 1px;
+    max-width: 126px;
+    line-height: .9em;
 }
+
+
+.telzir-logo > span > :nth-child(1){
+    color: rgb(54, 54, 54);
+    font-size: 18px;
+    line-height: 1em;
+}
+
+

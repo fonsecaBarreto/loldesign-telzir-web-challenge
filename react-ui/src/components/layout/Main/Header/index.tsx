@@ -1,5 +1,6 @@
 
 import React, {useMemo } from 'react'
+import Logo from "@assets/logo.png"
 import './style.css'
 
 export namespace PrimaryHeader {
@@ -9,23 +10,19 @@ export namespace PrimaryHeader {
 }
 
 export const PrimaryHeaderComponent: React.FunctionComponent<PrimaryHeader.Params> =  ({ onChange })=> {
-    return (
-        <header className="primary-header-container">
-            <div className="primary-header-content app-container">
-               {/*  <section>
-                  { goBack && 
-                    <Link className='backwards-btn' to={goBack}> 
-                       &#x2039;
-                    </Link>
-                    }
-                  <span className='primary-header-title'>{ currentPage?.label }</span>
-                </section>
-                <section>
-                    
-                </section> */} 
-            </div> 
-        </header> 
-    )
+	return (
+		<header className="primary-header-container">
+			<div className="primary-header-content app-container">
+				<div className='telzir-logo'>
+						<img src={Logo}/> 
+						<span> 
+							<span> Telzir </span>
+							FaleMais 
+						</span>
+				</div>
+			</div> 
+		</header> 
+	)
 }
 
 export default PrimaryHeaderComponent
