@@ -20,11 +20,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "experimentalDecorators": true,
     "paths": {
       "@/*": [ "./src/*"],
       "@assets/*": [ "./src/assets/*"],
       "@pages/*": [ "./src/components/pages/*"],
-    }
+    },
   },
   "include": [
     "src"
