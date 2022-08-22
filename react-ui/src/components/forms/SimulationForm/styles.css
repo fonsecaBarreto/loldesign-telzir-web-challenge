@@ -1,0 +1,16 @@
+.form-grid-footer{
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.telzir-add-btn{
+  width: fit-content;
+  min-width: 200px;
+  height: 36px;
+  border-radius: 8px;
+  margin: auto;
+  border: solid 2px rgb(0, 102, 170);
+  cursor: pointer;
+}
+
