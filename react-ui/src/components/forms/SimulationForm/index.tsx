@@ -60,7 +60,7 @@ export const SimulationForm: React.FunctionComponent<SimulationFormTypes.Props> 
   }
   
   return (
-  <div>
+  <div className="simulation-form">
     <main>
       <FormGrid columns={[ 6, 6, 12, 12]}>
     

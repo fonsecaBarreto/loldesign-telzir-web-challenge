@@ -55,18 +55,24 @@ export const HomePage = () => {
     }
   }
 
-  /*  Should show load page before load content from api */
+  const clearSimulations = () =>{
+    setSimulations([])
+  }
   return (
   <div id="home-page">
     <MainLayout>
-      <main>
-        <h1> Simulação Planos FaleMais </h1>
+      <main className="home-page-content">
+        <h2> Simulação Planos FaleMais </h2>
         <SimulationForm 
           onChange={handleChange}
           originRegions={regions} 
           destinyRegions={selectedOrigin?.destinies ?? []}
           plans={plans}/>
         <TelzirTable data={simulations}/> 
+
+        <button 
+          className="clear-btn"
+          onClick={clearSimulations}> &#10006;  </button> 
       </main>
     </MainLayout>
   </div>)

@@ -1,3 +1,6 @@
+.simulation-form{
+  width: 100%;
+}
 .form-grid-footer{
   display: flex;
   align-items: center;
