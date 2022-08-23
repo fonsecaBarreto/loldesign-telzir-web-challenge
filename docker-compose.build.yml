@@ -1,11 +1,11 @@
 version: '3'
 services:
   web:
-    image: loldesign-telzir-web-challenge
     build:
       context: ./react-ui
       target: production
       args:
         REACT_APP_API_URL: http://localhost:9000/api/v1
+    image: loldesign-telzir-web-challenge
     ports:
-      - "8080:80"
+      - "80:80"
