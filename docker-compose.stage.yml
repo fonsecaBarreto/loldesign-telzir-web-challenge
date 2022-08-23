@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+
+  web:
+    image: fonsecabarreto/loldesign-telzir-web-challenge
+    ports:
+      - "8080:80"
+    depends_on:
+      - api_stage
+    networks:
+      - telzir-stage
+
+  api_stage:
+    image: fonsecabarreto/loldesign-telzir-api-challenge:latest
+    environment:
+      - DATABASE_URL=postgresql://postgres:123@db_stage:5432/pgtelzir?schema=public
+    ports:
+      - 9000:3000
+    depends_on:
+      - db_stage
+    networks:
+      - telzir-stage
+    command: 
+        sh -c "npx prisma migrate deploy && node ./prisma/seed/index.js && node dist/src/main.js"
+
+  db_stage:
+    container_name: telzir_db_stage
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_DB=pgtelzir
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+    ports:
+      - 5436:5432
+    networks:
+      - telzir-stage
+
+networks:
+  telzir-stage:
+    driver: bridge
+
